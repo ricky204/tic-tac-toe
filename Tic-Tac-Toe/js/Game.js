@@ -24,7 +24,7 @@ export default class Game {
             this.nextTurn();
         }
     }
-
+    // Order for there to be a winner
     findWinningCombination() {
         const winningCombinations = [
             [0, 1, 2],
@@ -47,7 +47,7 @@ export default class Game {
         return null;
     }
 
-    isInProgess() {
+    isInProgress() {
         return !this.findWinningCombination() && this.board.includes(null);
     }
 }

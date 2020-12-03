@@ -42,3 +42,32 @@
     background: none;
     cursor: pointer;
 }
+/* aligning where the X's and O's can be placed */
+.board {
+    display: grid;
+    background: #cccccc;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+/* centering the X's and O's, adding color to transparent boarders */
+.board__tile {
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #222222;
+}
+
+.board__tile:hover {
+    background: #eeeeee;
+}
+/* changing colort to winning move */
+.board__tile--winner {
+    color: green;
+}
